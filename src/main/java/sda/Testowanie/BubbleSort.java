@@ -1,4 +1,4 @@
-package sda;
+package sda.Testowanie;
 
 import java.util.ArrayList;
 import java.util.List;

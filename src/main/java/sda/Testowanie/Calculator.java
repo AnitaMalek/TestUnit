@@ -1,4 +1,4 @@
-package sda;
+package sda.Testowanie;
 
 
 
@@ -20,9 +20,13 @@ public int mnozenie (int liczba1, int liczba2) {
 // dzielenie:
 
 public double divide (double liczba1, double liczba2) {
-    if (liczba2==0) {
-
+    if (liczba1==0 || liczba2==0 ) {
+// opcja1:
+       throw new ArithmeticException("Zła wartość!!!");
+// opcja2:
+// throw new IllegalArgumentException("Dzielisz przez 0!!");
     }
+
     return liczba1 / liczba2;
 }
 

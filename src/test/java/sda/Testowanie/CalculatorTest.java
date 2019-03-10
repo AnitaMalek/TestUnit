@@ -1,33 +1,27 @@
-package sda;
+package sda.Testowanie;
 
 import junitparams.JUnitParamsRunner;
-import org.junit.Before;
-import org.junit.runner.RunWith;
-
-
-import junitparams.Parameters;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-import java.util.ArrayList;
-import java.util.List;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.junit.Assert.assertEquals;
 @RunWith(JUnitParamsRunner.class)
 public class CalculatorTest {
-
-    private Calculator calculator;
-
-    @Before
-    public void setUp() throws Exception {
-        this.calculator = new Calculator();
-    }
-
-//    @Test
+//
+//    private Calculator calculator;
+//
+//    @Before
+//    public void setUp() throws Exception {
+//        this.calculator = new Calculator();
+//    }
+//
+//        @Test
 //    public void testAdding1() {
 //        int result = calculator.dodawanie(2, 4);
-//        Assert.assertEquals(5, result);
+//       assertThat(result).isEqualTo(6);
 //    }
 //
 //    @Test
@@ -44,7 +38,7 @@ public class CalculatorTest {
 //
 //    @Test
 //    public void testDivide() {
-//        Double result = calculator.divide(3, 8);
+//        Double result = calculator.divide(3, 0);
 //        Assert.assertEquals(Double.valueOf(0.0), result);
 //    }
 
@@ -54,12 +48,12 @@ public class CalculatorTest {
 ////        Assert.assertEquals(16, result);
 ////    }
 
-    BubbleSort bubbleSort;
-
-    @Before
-    public void settUp() throws Exception {
-        this.bubbleSort = new BubbleSort();
-    }
+//    BubbleSort bubbleSort;
+//
+//    @Before
+//    public void settUp() throws Exception {
+//        this.bubbleSort = new BubbleSort();
+//    }
 
 //    @Test
 //    public void testBubbleSort() {
@@ -80,16 +74,16 @@ public class CalculatorTest {
 //        Assert.assertEquals(lista1, bubbleSort.sort(lista2));
 //    }
 
-    @Test
-    public void testPrime() {
-        List<Integer> pierwsze = new ArrayList<>();
-        pierwsze.add(2);
-        pierwsze.add(3);
-        pierwsze.add(5);
-        pierwsze.add(7);
-
-        Assert.assertEquals(pierwsze, bubbleSort.getPrime(1, 8));
-    }
+//    @Test
+//    public void testPrime() {
+//        List<Integer> pierwsze = new ArrayList<>();
+//        pierwsze.add(2);
+//        pierwsze.add(3);
+//        pierwsze.add(5);
+//        pierwsze.add(7);
+//
+//        Assert.assertEquals(pierwsze, bubbleSort.getPrime(1, 8));
+//    }
 
     //    @Test
 //    @Parameters(method = "testAdding")
@@ -104,5 +98,16 @@ public class CalculatorTest {
 //                new Object[]{5, 6, 11}
 //        };
 //
+//    }
+
+//    @Test(expected = ArithmeticException.class)
+//    public void testDivision() {
+//        Double result = null;
+//        try {
+//            result = calculator.divide(new Double(0), new Double(2));
+//        } catch (ArithmeticException exception) {
+//            assertNull(result);
+//            assertEquals(exception.getMessage(), "Incorrect value");
+//        }
 //    }
 }
